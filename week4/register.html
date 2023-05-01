@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>page for registering in into AI </title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        22
+        function myFunction() {
+            let name = document.getElementById("name").value;
+            let dob = document.getElementById("dob").value;
+            let address = document.getElementById("address").value;
+            let mail = document.getElementById("mail").value;
+            let mobile = document.getElementById("mobile").value;
+            let cpassword = document.getElementById("confirmpassword").value;
+            let password = document.getElementById("password1").value;
+            let username = document.getElementById("username").value;
+            let r = 0;
+            if
+                (name == "" || dob == "" || address == "" || mail == "" || mobile == "" || cpassword == "" || password== "" || username == "") {
+                r = 1;
+                alert("empty field");
+            }
+            if (username.length < 8) {
+                r = 1;
+                alert("username less than 6");
+            }
+            if (password.length < 8) {
+                r = 1;
+                alert("password <8");
+            }
+            if (cpassword.length < 8) {
+                r = 1;
+                alert("confirm password <8");
+            }
+            if (password != cpassword) {
+                r = 1;
+                alert("confirm password and password are diff");
+            }
+            if (mobile.length != 10) {
+                r = 1;
+                alert("mobile no should have 10 char");
+            }
+            if (parseInt(mobile.charAt(0) <= 6)) {
+                r = 1;
+                alert("first number in mobile no is <6");
+            }
+            if (r == 0) {
+                alert("successful");
+            }
+            else {
+                alert("invalid");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <h2>Registration Page</h2>
+    </center>
+    <div class="login-box">
+        <form>
+            <div class="user-box">
+                <input type='text' name="username" id="name" required="">
+                <label>Username:</label>
+            </div>
+            <div class="user-box">
+                <input type='password' name="passowrd" id="password1" required="">
+                <label>Password:</label>
+            </div>
+            <div class="user-box">
+                <input type='text' name="Confirm passowrd" id="cpassword" required="">
+                <label for="Confirm Password">Confirm Password:</label>
+            </div>
+            <div class="user-box">
+                <input type='email' name="email" id="mail" required="">
+                <label for="email">E-mail:</label>
+            </div>
+            <div class="user-box">
+                <input type="date" name="DOB" id="dob">
+                <label for="DOB">Date of Birth:</label>
+            </div>
+            <div class="user-box">
+                <input type='number' name="Age" id="age" required="">
+                <label for="Age">Age:</label>
+            </div>
+            <label for="Gender" style="color: #fff; font-size: 16 px;">Gender</label><br><br>
+            <input type='radio' name="Gender" id="male">
+            <div style='color:#fff;display: inline;'>Male</div></input>
+            <input type='radio' name="Gender" id="female">
+            <div style='color:#fff;display: inline;'>Female</div></input>
+            <div class="user-box">
+                <input type='tel' name="Mobile" id="mobile" required="">
+                <label for="Mobile">Mobile:</label>
+            </div>
+            <button id="button" onclick="myFunction()">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
