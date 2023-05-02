@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="transform.xsl"?>
+<!DOCTYPE catalog [
+<!ELEMENT catalog (book)*>
+<!ELEMENT book (title,author,publication,edition,ISBN,price)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT publication (#PCDATA)>
+<!ELEMENT edition (#PCDATA)>
+<!ELEMENT ISBN (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+] >
+<catalog>
+<book>
+<title>XML Bildt</title>
+<author>Winston</author>
+<publication>Willey</publication>
+<edition>5</edition>
+<ISBN>0-7645-4750-7</ISBN>
+<price>1200</price>
+</book>
+<book>
+<title>AI</title>
+<author>Russel</author>
+<publication>Princeton</publication>
+<edition>5</edition>
+<ISBN>0-13-730-7</ISBN>
+<price>1700</price>
+</book>
+</catalog>
